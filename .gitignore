@@ -4,3 +4,5 @@ __pycache__/
 
 # Ignore the virtual environment
 .venv/
+
+outputs/
