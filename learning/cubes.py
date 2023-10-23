@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-x_values = range(1, 5001)
+x_values = range(1, 100)
 y_values = [x ** 3 for x in x_values]
 
 plt.style.use('seaborn-v0_8')
@@ -13,5 +13,5 @@ ax.set_ylabel("Cube of Value", fontsize=14)
 ax.tick_params(labelsize=14)
 ax.ticklabel_format(style='plain')
 
-# plt.show()
-plt.savefig('./outputs/cubes_plot.png', bbox_inches='tight')
+plt.show()
+# plt.savefig('./outputs/cubes_plot.png', bbox_inches='tight')
