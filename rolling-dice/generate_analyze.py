@@ -30,7 +30,7 @@ def roll_dice(times, **kwargs):
 def analyze_results(results, dice):
     """(list, dict)
     receives a list with X results from rolling dice (dict)
-    and returns the frequencies each possible number (result) got."""
+    and returns a tuple with possible results and frequencies each one got."""
     frequencies = []
     i=0
     max_result = 0
@@ -44,9 +44,15 @@ def analyze_results(results, dice):
         frequency = results.count(value)
         frequencies.append(frequency)
 
-    return frequencies
+    return (poss_results, frequencies)
 
 # # Test functions
-# print(roll_dice(5, d4=1, d6=2))
-# res, di = roll_dice(100, d4=1, d6=2)
-# print(analyze_results(res, di))
+# # print(roll_dice(5, d4=1, d6=2))
+# res, di = roll_dice(100, d4=2, d6=3)
+# ks, vs = analyze_results(res, di)
+# diccionario = dict(zip(ks, vs))
+# for k, v in zip(ks, vs):
+#     if v == 1:
+#         print(f"{k} came out 1 time.\n")
+#     else:
+#         print(f"{k} came out {v} times.\n")
